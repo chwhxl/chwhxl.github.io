@@ -1,4 +1,39 @@
-title: My Portfolio
-description: A place to write about my ideas and projects
-author: chwhxl
-theme: jekyll-theme-cayman  # 기본 테마를 설정할 수 있어.
+title: 나의 포트폴리오
+description: 나만의 디지털 정원
+baseurl: "" # GitHub Pages에서 사용 시 /repo-name 입력
+url: "https://chwhxl.github.io" # GitHub Pages 주소
+
+# Build settings
+theme: jekyll-garden
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Notes (Obsidian vault 연결용)
+notes_folder: "_notes"  # 너의 마크다운 글이 들어있는 폴더명
+
+# Collections
+collections:
+  notes:
+    output: true
+    permalink: /notes/:title
+
+# 디지털 가든 관련
+garden:
+  auto_gen_graph: true  # 페이지들 사이의 연결 그래프 자동 생성
+  backlink: true        # 백링크 보여줄지 여부
+  graph:
+    enabled: true       # 그래프 시각화 기능 켜기
+
+# Google Analytics (선택사항)
+google_analytics: "G-XXXXXXX"
+
+# 사이트 내비게이션
+nav:
+  - name: Home
+    link: /
+  - name: Notes
+    link: /notes/
+  - name: About
+    link: /about/
